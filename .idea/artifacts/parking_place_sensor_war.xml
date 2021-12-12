@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="parking-place-sensor:war">
+    <output-path>$PROJECT_DIR$/parking-place-sensor/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>parking-place-sensor</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="parking-place-sensor.war">
+      <element id="artifact" artifact-name="parking-place-sensor:war exploded" />
+    </root>
+  </artifact>
+</component>

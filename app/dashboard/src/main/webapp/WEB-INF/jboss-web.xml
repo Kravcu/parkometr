@@ -1,0 +1,3 @@
+<jboss-web>
+    <security-domain>projectDomain</security-domain>
+</jboss-web>

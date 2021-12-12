@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/app/dashboard/dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/ejbs/ejbs.iml" filepath="$PROJECT_DIR$/app/ejbs/ejbs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/main-system/main-system.iml" filepath="$PROJECT_DIR$/app/main-system/main-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/mobile-notificator/mobile-notificator.iml" filepath="$PROJECT_DIR$/app/mobile-notificator/mobile-notificator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parking-meter/parking-meter.iml" filepath="$PROJECT_DIR$/parking-meter/parking-meter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parking-place-sensor/parking-place-sensor.iml" filepath="$PROJECT_DIR$/parking-place-sensor/parking-place-sensor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project.iml" filepath="$PROJECT_DIR$/project.iml" />
+    </modules>
+  </component>
+</project>

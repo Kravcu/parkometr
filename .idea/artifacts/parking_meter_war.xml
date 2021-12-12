@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="parking-meter:war">
+    <output-path>$PROJECT_DIR$/parking-meter/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>parking-meter</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="parking-meter.war">
+      <element id="artifact" artifact-name="parking-meter:war exploded" />
+    </root>
+  </artifact>
+</component>

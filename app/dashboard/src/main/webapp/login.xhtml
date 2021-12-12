@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<body>
+
+
+<h1>Please log in</h1>
+<form method="post" action="j_security_check" name="loginForm">
+    <h:panelGrid columns="2">
+        <h:outputLabel id="userNameLabel" for="j_username" value="User name:"/>
+        <h:inputText id="j_username"/>
+        <h:outputLabel id="passwordLabel" for="j_password"
+                       value="Password:"/>
+        <h:inputSecret id="j_password"/>
+        <div/>
+        <h:panelGroup>
+            <h:commandButton type="submit" value="Log in"/>
+            <h:commandButton type="reset" value="Reset"/>
+        </h:panelGroup>
+    </h:panelGrid>
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mobile-notificator:war">
+    <output-path>$PROJECT_DIR$/app/mobile-notificator/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>mobile-notificator</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mobile-notificator.war">
+      <element id="artifact" artifact-name="mobile-notificator:war exploded" />
+    </root>
+  </artifact>
+</component>

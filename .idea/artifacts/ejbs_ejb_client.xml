@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="ejbs:ejb-client">
+    <output-path>$PROJECT_DIR$/app/ejbs/target</output-path>
+    <root id="archive" name="ejbs-client.jar">
+      <element id="artifact" artifact-name="ejbs:ejb-client exploded" />
+    </root>
+  </artifact>
+</component>

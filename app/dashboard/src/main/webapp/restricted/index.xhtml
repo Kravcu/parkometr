@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <style type="text/css">
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</h:head>
+<h:body>
+    <h:form>
+        #{msg['language']} :
+        <h:selectOneMenu value="#{language.locale}" onchange="submit()"
+                         valueChangeListener="#{language.countryLocaleCodeChanged}">
+            <f:selectItems value="#{language.locales}" />
+            <f:converter converterId="localeConverter"/>
+        </h:selectOneMenu>
+    </h:form>
+    <h1>#{msg['login.log-in-label']}</h1>
+    <h1>#{msg['welcome']} #{request.userPrincipal}</h1>
+    <h:form>
+        <h3><h:commandLink value="#{msg['log-out']}" action="#{index.logout}"/> |
+            <h:commandLink value="#{msg['change-password']}" action="passwordChange"/>
+        </h3>
+    <table>
+        <tr>
+            <th>#{msg['section-number']}</th>
+            <th>#{msg['place-number']}</th>
+            <th>#{msg['last-bought-ticket']}</th>
+            <th>#{msg['last-state-changes']}</th>
+            <th>#{msg['status']}</th>
+        </tr>
+        <c:forEach var="entry" items="#{index.parkingPlacesMap}">
+                <c:forEach var="place" items="#{entry.value}">
+                    <tr>
+                        <td>#{place.sectionNumber}</td>
+                        <td>#{place.placeNumber}</td>
+                        <ui:fragment rendered="#{place.lastBoughtTicket != null}">
+                            <td>
+                                <b>#{msg['purchase']}:</b>
+                                <h:outputText value="#{place.lastBoughtTicket.purchase}" >
+                                    <f:converter converterId="localDateTimeConverter"/>
+                                </h:outputText>
+                                <br/>
+                                <b>#{msg['expiration']}:</b>
+                                <h:outputText value="#{place.lastBoughtTicket.expiration}" >
+                                    <f:converter converterId="localDateTimeConverter"/>
+                                </h:outputText>
+                                <br/>
+                                <b>#{msg['register-plate']}:</b>
+                                #{place.lastBoughtTicket.registerPlate}
+                            </td>
+                        </ui:fragment>
+                        <ui:fragment rendered="#{place.lastBoughtTicket == null}">
+                            <td>
+                                <b>#{msg['no-ticket-bought']}</b>
+                            </td>
+                        </ui:fragment>
+                        <td>
+                            <ul>
+                                <c:forEach var="stateChange" items="#{place.lastStateChanges}">
+                                    <li>
+                                        <h:outputText value="#{stateChange.date}" >
+                                            <f:converter converterId="localDateTimeConverter"/>
+                                        </h:outputText>
+                                        #{stateChange.state}
+                                    </li>
+                                </c:forEach>
+                            </ul>
+                        </td>
+                        <td>
+                            #{index.getStatus(place)}
+                        </td>
+                    </tr>
+                </c:forEach>
+        </c:forEach>
+    </table>
+    </h:form>
+</h:body>
+
+</html>

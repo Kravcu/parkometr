@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/app/ejbs" />
+    <file type="web" url="file://$PROJECT_DIR$/app/dashboard" />
+    <file type="web" url="file://$PROJECT_DIR$/app/main-system" />
+    <file type="web" url="file://$PROJECT_DIR$/app/mobile-notificator" />
+    <file type="web" url="file://$PROJECT_DIR$/parking-meter" />
+    <file type="web" url="file://$PROJECT_DIR$/parking-place-sensor" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" default="true" project-jdk-name="openjdk-15" project-jdk-type="JavaSDK" />
+</project>
